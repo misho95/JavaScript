@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    width: 80%;
+}
+
+.news-box {
+    border: 1px dotted black;
+    padding: 5px;
+    margin: 5px;
+}
+
+.buttons button {
+    padding: 5px;
+    margin: 2px;
+}
