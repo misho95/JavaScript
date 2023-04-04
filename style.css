@@ -14,15 +14,26 @@ body {
 
 .main {
     width: 80%;
+    background-color: whitesmoke;
+    padding: 50px;
 }
 
-.news-box {
-    border: 1px dotted black;
-    padding: 5px;
-    margin: 5px;
+.main ul li {
+    margin: 20px;
 }
 
-.buttons button {
+.main ul li button {
+    background-color: slateblue;
     padding: 5px;
     margin: 2px;
+    cursor: pointer;
+    color: white;
+    border: none;
 }
+
+.main ul li button:disabled {
+    opacity: 0.5;
+}
+
+
+
