@@ -1,21 +1,36 @@
-//Move Child Down
 
 const mainUl = document.querySelector(`.main ul`);
 const spanBtn = document.querySelectorAll(`.main ul li button.move`);
 
 const spanBtnUp = document.querySelectorAll(`.main ul li button.moveUp`);
 
+//Move Child Down
 spanBtn.forEach((btn) => {
     btn.addEventListener(`click`, () => {
         const select_parent = btn.parentElement;
+        console.log(select_parent);
         const nextSibling = select_parent.nextElementSibling;
-        mainUl.appendChild(select_parent);
-       let allElse = nextSibling.nextElementSibling;
-            while(allElse != select_parent){
-                let current = allElse;
-                allElse = allElse.nextElementSibling;
-                mainUl.appendChild(current);
-            }                                                                            
+        nextSibling.after(select_parent);                                                        
+    })
+})
+
+//Move Child Up
+spanBtnUp.forEach((btn) => {
+    btn.addEventListener(`click`, () => {
+      
+        const select_parent = btn.parentElement;
+        let nextSibling = select_parent.previousElementSibling;
+        nextSibling = nextSibling.previousElementSibling;
+        if(nextSibling !== null){
+        nextSibling.after(select_parent);
+        } else {
+            console.log(`error`);
+            const prev = select_parent.previousElementSibling;
+            console.log(prev);
+            select_parent.after(prev);
+            
+        }
+                                                        
     })
 })
 
@@ -25,20 +40,10 @@ const spanBtnDelete = document.querySelectorAll(`.main ul li button.delete`);
 
 spanBtnDelete.forEach((btn) => {
     btn.addEventListener(`click`, () => {
+        console.log(`click`);
         const select_parent = btn.parentElement;
         mainUl.removeChild(select_parent);
     })
 })
 
-//add Note
 
-const select_formInput = document.querySelector(`.main form input`);
-const select_formBtn = document.querySelector(`.main form button`);
-
-select_formBtn.addEventListener(`click`, (evnet) => {
-    evnet.preventDefault();
-    const li = document.createElement(`li`);
-    li.innerHTML = select_formInput.value + `<button class="move">Move Down</button><button class="delete">Delete</button>`;
-    mainUl.appendChild(li);
-    select_formInput.value = ``;
-})

@@ -20,16 +20,37 @@ body {
 
 .main ul li {
     margin: 20px;
+    padding: 5px;
+    font-size: 19px;
+    font-weight: 700;
+    font-family: sans-serif;
 }
 
 .main ul li button {
-    background-color: slateblue;
     padding: 5px;
     margin: 2px;
     cursor: pointer;
-    color: white;
     border: none;
 }
+
+.main ul li button.move{
+    background-color: brown;
+    color: white;
+    margin-left: 50px;
+}
+
+
+.main ul li button.moveUp{
+    background-color: blue;
+    color: white;
+}
+
+
+.main ul li button.delete {
+    background-color: red;
+    color: white;
+}
+
 
 .main ul li button:disabled {
     opacity: 0.5;
