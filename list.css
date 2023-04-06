@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEF0F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.list-box {
+    width: 500px;
+}
+
+.list-box form {
+    width: 100%;
+    padding: 10px;
+    background-color: #141414;
+}
+
+.grid-this {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.grid-this input{
+    padding: 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color:  #EEF0F2;
+    color: #141414;
+}
+
+.grid-this button {
+    background-color:#EEC643;
+    border: none;
+    outline: none;
+    color: #141414;
+}
+
+
+.lists {
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.list {
+    position: relative;
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid #141414;
+}
+
+.active-list {
+    border: 2px solid red;
+}
+
+.grid-right {
+    z-index: 99;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.grid-right button {
+    padding: 5px;
+}
+
+.remove {
+    width: 100%;
+    padding: 5px;
+    background-color: #EEC643;
+    border: 1px solid #141414;
+    outline: none;
+    margin-top: 5px;
+}
+
+.remove:active {
+    background-color: #141414;
+    color: #EEF0F2;
+}
+
+.downbtn {
+    border-radius: 5px;
+    background-color: #0D21A1;
+    color: #EEF0F2;
+    border: none;
+    outline: none;
+}
+
+.downbtn:active {
+    background-color: #011638;
+}
+
+.upbtn {
+    border-radius: 5px;
+    background-color: #a10d0d;
+    color: #EEF0F2;
+    border: none;
+    outline: none;
+}
+
+.upbtn:active {
+    background-color: #380101;
+}
+
+
+
+.editbtn {
+    border-radius: 5px;
+    background-color: #12a10d;
+    color: #EEF0F2;
+    border: none;
+    outline: none;
+}
+
+.editbtn:active {
+    background-color: #013808;
+}
