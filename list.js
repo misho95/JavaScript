@@ -147,7 +147,8 @@ removeBtn.addEventListener(`click`, (event) => {
         const child = parent.firstElementChild;
         const value = child.textContent;
         const newValue = prompt(`Edit List,`, value);
-        if(newValue !== ``){
+        console.log(newValue);
+        if(newValue !== `` && newValue[0] !== ` `){
             child.textContent = newValue;
         }
     }
